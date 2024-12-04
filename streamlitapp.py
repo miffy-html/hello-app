@@ -1,4 +1,7 @@
 import streamlit as st
+import pandas as pd
+import numpy as np
+import plotly.figure_factory as ff
 st.title('This is a title')
 # Header
 st.header('This is a header')
@@ -14,8 +17,6 @@ st.latex(r'''
     ''')
 
 # to display pandas dataframe object
-import pandas as pd
-import numpy as np
 
 df = pd.DataFrame(
    np.random.randn(50, 20),
@@ -31,7 +32,7 @@ chart_data = pd.DataFrame(
 st.line_chart(chart_data)
 
 
-import plotly.figure_factory as ff
+
 x1 = np.random.randn(200) - 2
 x2 = np.random.randn(200)
 x3 = np.random.randn(200) + 2
@@ -57,8 +58,6 @@ if genre == 'Comedy':
     st.write('You selected comedy.')
 else:
     st.write("You didn't select comedy.")
-# Usage of multiselect widget
-import streamlit as st
 
 options = st.multiselect(
     'What are your favorite colors',
